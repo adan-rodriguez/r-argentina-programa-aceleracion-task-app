@@ -1,6 +1,7 @@
-import TaskApp from "./components/TaskApp";
-import Logo from "./assets/images/logo.png"
-import Footer from "./components/Footer";
+import React from 'react';
+import TaskApp from './components/TaskApp';
+import Logo from './assets/images/logo.png';
+import Footer from './components/Footer';
 
 function App() {
   return (

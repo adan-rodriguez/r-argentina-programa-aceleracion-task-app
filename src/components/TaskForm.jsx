@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const TaskForm = ({ addTask }) => {
+function TaskForm({ addTask }) {
   const [input, setInput] = useState("");
 
   const handleChange = (e) => {
@@ -25,23 +25,25 @@ const TaskForm = ({ addTask }) => {
     <form onSubmit={handleSubmit}>
       <ul>
         <li>
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            required
-            maxLength="50"
-            placeholder="Add a task..."
-            onChange={handleChange}
-          />
+          <label htmlFor="title">
+            Title
+            <input
+              type="text"
+              name="title"
+              id="title"
+              required
+              maxLength="50"
+              placeholder="Add a task..."
+              onChange={handleChange}
+            />
+          </label>
         </li>
         <li>
-          <button>Add Task</button>
+          <button type="submit">Add Task</button>
         </li>
       </ul>
     </form>
   );
-};
+}
 
 export default TaskForm;

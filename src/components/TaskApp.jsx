@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Task from "./Task";
-import TaskForm from "./TaskForm";
+import React, { useState } from 'react';
+import Task from './Task';
+import TaskForm from './TaskForm';
 
-const TaskApp = () => {
+function TaskApp() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
@@ -46,6 +46,6 @@ const TaskApp = () => {
       </div>
     </div>
   );
-};
+}
 
 export default TaskApp;
