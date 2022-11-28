@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import Task from './Task';
-import TaskForm from './TaskForm';
+import { useState } from "react";
+import Task from "./Task";
+import TaskForm from "./TaskForm";
 
 function TaskApp() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
     if (task.title.trim()) {
-      task.title = task.title.trim();
-      const updatedTasks = [task, ...tasks];
+      const newTask = task;
+      newTask.title = task.title.trim();
+      const updatedTasks = [newTask, ...tasks];
       setTasks(updatedTasks);
     }
   };
@@ -20,10 +21,11 @@ function TaskApp() {
 
   const completedTask = (id) => {
     const updatedTasks = tasks.map((task) => {
+      const taskToUpdate = task;
       if (task.id === id) {
-        task.completed = !task.completed;
+        taskToUpdate.completed = !taskToUpdate.completed;
       }
-      return task;
+      return taskToUpdate;
     });
     setTasks(updatedTasks);
   };

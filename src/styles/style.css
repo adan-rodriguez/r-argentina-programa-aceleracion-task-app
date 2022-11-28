@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   margin: 0;
@@ -11,10 +11,10 @@ body {
   letter-spacing: 1px;
 }
 
-#root{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -22,16 +22,18 @@ body {
   height: 100px;
 }
 
-.task-app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.task-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.task-app, form, .task{
-    border: 1px solid black;
+.task-app,
+form,
+.task {
+  border: 1px solid black;
 }
 
-form ul{
-    list-style-type: none;
+form ul {
+  list-style-type: none;
 }
