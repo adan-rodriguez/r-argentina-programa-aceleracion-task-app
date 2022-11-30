@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "format": "prettier --write .",
@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cypress": "^11.2.0",
     "eslint": "^8.28.0",
     "eslint-config-airbnb": "^19.0.4",
